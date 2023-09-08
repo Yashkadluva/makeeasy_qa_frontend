@@ -1,0 +1,307 @@
+$blue: #435baa;
+$MenuBlue: #435baa;
+$white: #ffffff;
+$sideMenuWhite: #fff;
+$black: #02101b;
+$shadeGrey: #717171;
+$lowGrey: #999999;
+$lightGrey: #f6f6f6;
+$lightWhite: #f5f5f5;
+$lightBlue: #f6f8ff;
+$Blue50: #7991F3;
+$secondaryBlue: #5370d1;
+$navLink: #b9c7f8;
+$bodyBg: #e0e0e0;
+$checkBox-bg: #435baa;
+$btnTextClr: #fff;
+$ghostWhite: #f9f9f9;
+$grey: #d9d9d9;
+$extremeLightGrey: #eeeeee;
+$grey91: #e8e8e8;
+$aliceBlue: #fcfeff;
+$extremeAliceBlue: #f0f8ff;
+$whiteSmoke: #efefef;
+$autumn: #bbbbbb;
+$scrollColor: #bbbbbb;
+$chestnut: #b94a48;
+$secondary: #ddd;
+$color2: #fff;
+$color3: #ee3b33;
+$color4: #f5fbff;
+
+$modalHeaderClr: #ffffff;
+$leftMenuCornerClr: brightness(1);
+$ThemeClr: brightness(1) invert(0);
+$rowHoverBgClr: #9f9e9e21;
+$MenuHoverClr: #ffffff;
+$MenuActiveBg: #ffffff;
+$FilterBtnCionHoverClr: brightness(0) invert(1);
+$FilterBtnCionClr: brightness(1) invert(0);
+$CustInfoiconClr: brightness(0) invert(0);
+$menuActiveIconClr: invert(52%) sepia(28%) saturate(5507%) hue-rotate(204deg)
+  brightness(67%) contrast(108%);
+$headertopGradient: linear-gradient(89.98deg, #142c7a 15.63%, #5370d1 99.98%);
+$bg-gradient-v: linear-gradient(180deg, #142c7a 0%, #5370d1 100%);
+$bg-gradient-btn: linear-gradient(180deg, #142c7a 0%, #5370d1 100%);
+$bg-gradient-no: linear-gradient(180deg, #142c7a 0%, #142c7a 100%);
+$shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+$tableThBorderClr: #d6d6d6;
+
+$inputFontSize: 14px;
+
+// Dark Light Theme ------------
+
+$themes: (
+  errorMsgBg: (
+    lightTheme: #f2dede,
+    darkTheme: #3a3838
+  ),
+  overviewBoxHover: (
+    lightTheme: #0000003d,
+    darkTheme: #0000008c
+  ),
+    ActiveGreen: (
+    lightTheme: #33C046,
+    darkTheme: #a4a6a5
+  ),
+    lightFilter: (
+    lightTheme: grayscale(0),
+    darkTheme: grayscale(1)
+  ),
+    IconDarkLight: (
+    lightTheme: grayscale(0),
+    darkTheme: grayscale(1)
+  ),
+    textDark: (
+    lightTheme: #02101b,
+    darkTheme: #ffffff
+  ),
+    TavNavLinkClr: (
+    lightTheme: #333333,
+    darkTheme: #808080
+  ),
+    leftColspSubmenuClr: (
+    lightTheme: #717171,
+    darkTheme: #E7E7E7
+  ),
+  BorderGradient: (
+    lightTheme: linear-gradient(to bottom, #142c7b, rgb(83 112 209)) 1 77%,
+    darkTheme: linear-gradient(to bottom, #3e3e3e, rgb(142 142 142)) 1 77%,
+  ),
+  navtabBorderClr: (
+    lightTheme: #dddddd,
+    darkTheme: #8e8e8e
+  ),
+    leftCollaspseSubmenuBg: (
+    lightTheme: #E7E7E7,
+    darkTheme: #5e5e5e
+  ),
+    calendarIcon: (
+    lightTheme: url("assets/images/calender.svg"),
+    darkTheme: url("assets/images/calendar-cion-white.svg")
+  ),
+    tableThBorderClr: (
+    lightTheme:#d6d6d6,
+    darkTheme: #535353
+  ),
+  
+    shadow: (
+    lightTheme:0px 2px 9px rgb(0 0 0 / 13%),
+    darkTheme:0px 4px 8px rgba(0, 0, 0, 0.1)
+  ),
+    bg-gradient-no: (
+    lightTheme:linear-gradient(180deg, #142c7a 0%, #142c7a 100%),
+    darkTheme:linear-gradient(180deg, #e9ebf1 0%, #eceef4 100%)
+  ),
+    bg-gradient-btn: (
+    lightTheme:linear-gradient(180deg, #142c7a 0%, #5370d1 100%),
+    darkTheme:linear-gradient(180deg, #525252 0%, #a4a4a4 100%)
+  ),
+    filterBlue: (
+    lightTheme:invert(34%) sepia(9%) saturate(4173%) hue-rotate(190deg) brightness(98%) contrast(85%),
+    darkTheme: invert(88%) sepia(0%) saturate(0%) hue-rotate(143deg) brightness(103%) contrast(92%)
+  ),
+    menuActiveIconClr: (
+    lightTheme:invert(52%) sepia(28%) saturate(5507%) hue-rotate(204deg) brightness(67%) contrast(108%),
+    darkTheme: brightness(1)
+  ),
+    CustInfoiconClr: (
+    lightTheme:brightness(1) invert(0),
+    darkTheme: brightness(0) invert(1),
+  ),
+    FilterBtnCionClr: (
+    lightTheme:brightness(1) invert(0),
+    darkTheme: brightness(0) invert(1),
+  ),
+    FilterBtnCionHoverClr: (
+    lightTheme: brightness(0) invert(1),
+    darkTheme: brightness(0) invert(0),
+  ),
+    MenuHoverClr: (
+    lightTheme: #ffffff,
+    darkTheme: #ffffff
+  ),
+    rowHoverBgClr: (
+    lightTheme: #9f9e9e21,
+    darkTheme: #9f9e9e21
+  ),
+    ThemeClr: (
+    lightTheme: brightness(1) invert(0),
+    darkTheme: brightness(0) invert(1)
+  ),
+    modalHeaderClr: (
+    lightTheme: #ffffff,
+    darkTheme: #303030,
+  ),
+    color4: (
+    lightTheme: #f5fbff,
+    darkTheme: #F5FBFF,
+  ),
+    color2: (
+    lightTheme: #fff,
+    darkTheme: #fff,
+  ),
+    scrollColor: (
+    lightTheme: #bbbbbb,
+    darkTheme: #bbbbbb,
+  ),
+    autumn: (
+    lightTheme: #bbbbbb,
+    darkTheme: #bbbbbb,
+  ),
+    whiteSmoke: (
+    lightTheme: #efefef,
+    darkTheme: #EFEFEF,
+  ),
+    extremeAliceBlue: (
+    lightTheme: #f0f8ff,
+    darkTheme: #3e3e3e,
+  ),
+    aliceBlue: (
+    lightTheme: #fcfeff,
+    darkTheme: #FCFEFF,
+  ),
+    grey91: (
+    lightTheme: #e8e8e8,
+    darkTheme: #e8e8e821,
+  ),
+    extremeLightGrey: (
+    lightTheme: #eeeeee,
+    darkTheme: #494949,
+  ),
+    grey: (
+    lightTheme: #d9d9d9,
+    darkTheme: #4d4d4d,
+  ),
+    ghostWhite: (
+    lightTheme: #f9f9f9,
+    darkTheme: #414141,
+  ),
+    btnTextClr: (
+    lightTheme: #ffffff,
+    darkTheme: #ffffff,
+  ),
+    checkBox-bg: (
+    lightTheme: #435baa,
+    darkTheme: #4e4e4e,
+  ),
+    navLink: (
+    lightTheme: #b9c7f8,
+    darkTheme: #B9C7F8,
+  ),
+    lightBlue: (
+    lightTheme: #f6f8ff,
+    darkTheme: #2a2a2a,
+  ),
+    Blue50: (
+    lightTheme: #7991F3,
+    darkTheme: #aaaaaa,
+  ),
+    lightWhite: (
+    lightTheme: #f5f5f5,
+    darkTheme: #505050,
+  ),
+    lightGrey: (
+    lightTheme: #f6f6f6,
+    darkTheme: #2e2e2e,
+  ),
+    lowGrey: (
+    darkTheme: #999999,
+    lightTheme: #999999,
+  ),
+    shadeGrey: (
+    darkTheme: #717171,
+    lightTheme: #717171,
+  ),
+  headertopGradient: (
+    darkTheme: linear-gradient(89.98deg, #151516 15.63%, #151516 99.98%),
+    lightTheme: linear-gradient(89.98deg, #142c7a 15.63%, #5370d1 99.98%),
+  ),
+  bg-gradient-v: (
+    lightTheme: linear-gradient(180deg, #142c7a 0%, #5370d1 100%),
+    darkTheme: linear-gradient(180deg, #151516 0%, #1e1e1e 100%),
+  ),
+  leftMenuCornerClr: (
+    lightTheme: brightness(1),
+    darkTheme: brightness(0.4)
+  ),
+  MenuActiveBg: (
+    lightTheme: #ffffff,
+    darkTheme: #ffffff4a
+  ),
+  MenuBlue: (
+    lightTheme: #435baa,
+    darkTheme: #fff,
+  ),
+  blue: (
+    lightTheme: #435baa,
+    darkTheme: #e1e1e1,
+  ),
+  blue-40: (
+    lightTheme: #E8EDFF,
+    darkTheme: #6c6b6b,
+  ),
+  secondaryBlue: (
+    lightTheme: #5370d1,
+    darkTheme: #dedede,
+  ),
+  btnBrandClr2: (
+    lightTheme: #5370d1,
+    darkTheme: #3f3f3f,
+  ),
+  bodyBg: (
+    lightTheme: #e0e0e0,
+    darkTheme: #000000,
+  ),
+  white: (
+    lightTheme: #ffffff,
+    darkTheme: #222222,
+  ),
+  black: (
+    lightTheme: #02101b,
+    darkTheme: #f7f7f7,
+  ),
+  sideMenuWhite: (
+    lightTheme: #ffffff,
+    darkTheme: #fff,
+  ),
+);
+
+@mixin styles($mode) {
+  @each $key, $map in $themes {
+    @each $prop, $color in $map {
+      @if $prop == $mode {
+        --#{$key}: #{$color};
+      }
+    }
+  }
+}
+
+.dark-mode {
+  @include styles("darkTheme");
+}
+
+.light-mode {
+  @include styles("lightTheme");
+}
