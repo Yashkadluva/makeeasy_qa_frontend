@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Sawin Service Automation" />
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <link rel="stylesheet" href="%PUBLIC_URL%/css/bootstrap.min.css" />
+  <!-- Fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <!-- KENDO -->
+  <link href="%PUBLIC_URL%/css/kendo.common.min.css" rel="stylesheet" id="common-css" />
+  <link href="%PUBLIC_URL%/css/kendo.default.min.css" rel="stylesheet" id="skin-css" />
+
+  <script src="./assets/jquery-3.3.1.min.js"></script>
+  <script src="./assets/telerikReportViewer-14.2.20.1021.js"></script>
+  <script src="./assets/telerikReportViewer.kendo-14.2.20.1021.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/signalr.js/2.4.1/jquery.signalR.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbGxCGRyI51IgjLi3sebel2fhLiMJ5Ygc"></script>
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>Sawin</title>
+</head>
+
+<body class="">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <footer>
+    <div style="position: fixed; bottom: 2px; right: 0px;margin-right: 40px;">Dev version 1.1.6 (17/07/2023)</div>
+
+    <script>
+      var isConnected = '';
+      const initilizeConnection = () => {
+        const data = JSON.parse(localStorage.getItem("user_detail") || "{}")
+        if (data.AccountId) {
+          var connection = $.hubConnection();
+          connection.url = 'https://sawin-basic-webapi-po.azurewebsites.net/signalr';
+          var contosoChatHubProxy = connection.createHubProxy("SawinTwilioSignalRCHub");
+          var _groupName = `SAWIN::COMPANY-${data.AccountId}`;
+          contosoChatHubProxy.on(_groupName, function (message) {
+            console.log(message);
+          });
+          connection.start({ transport: ['webSockets'], pingInterval: 10000 }, function () {
+
+          }).done(function () {
+            localStorage.setItem('connectionId', connection.id)
+            console.log("Connected, transport = " + connection.transport.name);
+            contosoChatHubProxy.invoke('AddToGroup', _groupName).then(function (data) {
+              console.log("Add Group", _groupName)
+            });
+
+          }).fail(function () { console.log('Could not connect'); });;
+
+
+          contosoChatHubProxy.on('MessageReceived', function (message) {
+            console.log("MessageReceived", message);
+            const channel = new BroadcastChannel("SAWIN_SIGNALR_RECEIVED");
+            channel.postMessage(message);
+          });
+          console.log(contosoChatHubProxy);
+
+          connection.disconnected(function () {
+            connection.start({ transport: ['webSockets'], pingInterval: 10000 }, function () {
+              console.log("connection Reconnected!");
+
+            }).done(function () {
+              localStorage.setItem('connectionId', connection.id)
+              contosoChatHubProxy.invoke('AddToGroup', _groupName).then(function (data) {
+                console.log("Add to group reconnected", _groupName)
+              });
+
+            })
+          })
+
+          connection.stateChanged(function (state) {
+            // console.log("state", state)
+          })
+        }
+      }
+      const channel = new BroadcastChannel("SAWIN_LOGIN_SUCCESS");
+      initilizeConnection();
+      channel.onmessage = (event) => {
+        initilizeConnection();
+      }
+    </script>
+  </footer>
+</body>
+
+
+</html>
