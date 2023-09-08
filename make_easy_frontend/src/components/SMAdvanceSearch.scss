@@ -1,0 +1,42 @@
+.suggestions {
+    background-color: var(--lightBlue);
+    border: 1px solid var(--lightGrey);
+    border-left-width: 0.1em;
+    border-style: solid;
+    border-color: var(--grey);
+    border-top-width: 0;
+    border-right-width: 0.1em;
+    border-bottom-width: 0.1em;
+    list-style: none;
+    margin-top: -5px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding-left: 0;
+    position: absolute;
+    width: calc(100% - 24px);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: var(--shadow);
+    color: var(--black);
+    z-index: 1000000;
+
+    li {
+        padding: 4px 10px;
+        font-size: 13px;
+    }
+}
+
+.suggestion-active,
+.suggestions li:hover {
+    color: var(--white);
+    background-color: var(--blue) !important;
+    cursor: pointer;
+    width: 100%;
+
+    .search-address {
+        color: var(--white) !important;
+    }
+}
+
+.suggestions li:not(:last-of-type) {
+    border-bottom: 1px solid var(--lightGrey);
+}

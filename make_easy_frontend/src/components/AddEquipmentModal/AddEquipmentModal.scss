@@ -1,0 +1,82 @@
+@use '/src/variables';
+
+.new-box-main-view {
+    .new-box-view {
+        height: 250px;
+        background: var(--white);
+        border: 2px solid var(--blue);
+        border-style: dashed;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 15px;
+    }
+
+    .new-box-view:hover {
+        border-style: solid;
+    }
+
+    .upload-icon {
+        color: var(--blue);
+    }
+
+    .text-editor-margin {
+        margin-bottom: 100px;
+    }
+
+    .chkboxdiv {
+        display: flex;
+        align-items: center;
+    }
+
+    .addequpment-chkbox {
+        margin-left: 8px;
+    }
+
+    .upload-file-input {
+        display: none;
+    }
+
+    .add-new-equipment {
+        display: none;
+    }
+
+    .document-preview-main {
+        border: 1px solid var(--black);
+        border-radius: 5px;
+        height: 250px;
+        .document-preview {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            ;
+            img {
+                height: 195px;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+        .edit-image-div{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            padding: 10px;
+            img {
+                height: 20px;
+            }
+        }
+    }
+    .image-edit-btn {
+        background: transparent;
+        border: none;
+    }
+
+    .image-preview-btn {
+        background: transparent;
+        border: none;
+        height: 20px;
+        width: 25px;
+    }
+}

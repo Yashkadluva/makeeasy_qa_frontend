@@ -1,0 +1,13 @@
+@use '/src/variables';
+
+.headerLogo {
+    height: 69px;
+    width: 160px;
+    margin-left: 86px;
+    margin-top: 7px;
+}
+
+.header-main {
+    border-bottom: 1px solid var(--extremeLightGrey);
+    background-color: var(--white);
+}

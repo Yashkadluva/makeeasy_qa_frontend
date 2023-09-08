@@ -1,0 +1,60 @@
+@use "/src/variables";
+
+.sawin-button {
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 0;
+  background: var(--bg-gradient-btn);
+  color: var(--btnTextClr);
+}
+.primary-button {
+  color: white;
+  background-color: #1ea7fd;
+}
+
+.secondary-button {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+
+.button-small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+
+.button-medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.sawin-button[disabled]{
+opacity: 0.6;
+cursor: default;
+}
+
+.cancel-button,
+.button-large {
+  font-size: 14px;
+  border-radius: 5px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  padding: 7px 25px;
+  line-height: 22px;
+  height: 35px;
+  min-width: 110px;
+}
+
+.cancel-button {
+  border: 1px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
+  line-height: 20px;
+  min-width: 110px;
+  transition: 0.3s;
+}
+.cancel-button:hover{
+background-color: var(--blue);
+color: var(--white);
+}

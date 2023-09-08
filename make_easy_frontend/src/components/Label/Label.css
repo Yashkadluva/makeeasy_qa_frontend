@@ -1,0 +1,33 @@
+.title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+}
+
+.req1 {
+    color: #ff0000;
+    font-size: 13px;
+    right: 0px;
+    margin-right: 2px;
+}
+
+.error {
+    color: #b94a48;
+    margin-top: 2px;
+    height: 15px;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.bold-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #02101B;
+}
