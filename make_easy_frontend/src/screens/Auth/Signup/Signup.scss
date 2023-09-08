@@ -1,0 +1,135 @@
+@use "/src/variables";
+
+.signup {
+  background-color: var(--white);
+  height: 91vh;
+
+  .signup-main {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 900px;
+  }
+
+  .signup-logoView {
+    text-align: left;
+    margin-left: 80px;
+  }
+
+  .signup-logo-sawin {
+    margin-top: 19px;
+    height: 70px;
+    width: 160px;
+  }
+
+  .signup-heading {
+    font-size: 34px;
+    font-weight: 600;
+    margin-left: 100px;
+    margin-top: 18px;
+    font-style: normal;
+    color: var(--black);
+  }
+
+  .signup-subHeading {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 100px;
+    color: var(--black);
+    font-style: normal;
+    line-height: 16px;
+    margin-top: 7px;
+  }
+
+  .signupContainer {
+    background: var(--white);
+    width: 80%;
+    position: relative;
+    margin-left: 88px;
+  }
+
+  // .form-style {
+  //   .form-control {
+  //     height: 42px;
+  //     padding: 6px ​12px;
+  //     color: #000;
+  //     font-weight: 300;
+  //     background-color: var(--ghostWhite);
+  //     border-color: var(--grey91);
+  //     border-radius: 7px;
+  //     transition: 0.2s;
+  //     margin-top: 8px;
+  //   }
+
+  //   .form-control:focus {
+  //     border-color: var(--autumn);
+  //     background-color: var(--color2);
+  //   }
+
+  //   .form-control::placeholder {
+  //     color: var(--grey);
+  //     font-weight: 300;
+  //     font-size: 15px;
+  //   }
+
+  //   label {
+  //     font-weight: 400;
+  //     font-size: 15px;
+  //     line-height: 18px;
+  //     color: var(--black);
+  //     font-family: "Open Sans";
+  //     font-style: normal;
+  //   }
+  // }
+
+  .tick-image {
+    margin-left: 10px;
+  }
+
+  .thankyou {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 13px;
+    color: variables.$color3;
+  }
+
+  .b1 {
+    margin-left: 20px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--blue);
+  }
+
+  .emailMsg {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--black);
+  }
+
+  .b1-signup {
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  .login-button {
+    margin-left: 27px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--blue);
+  }
+
+  .bottom-buttons {
+    margin-top: 48px;
+  }
+}
