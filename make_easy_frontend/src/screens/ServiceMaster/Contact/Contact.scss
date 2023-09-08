@@ -1,0 +1,17 @@
+@use "/src/variables";
+
+.contact {
+  .togglecontent {
+    .toggle-button-cover {
+      overflow: auto;
+      height: 30px;
+      display: inline;
+      z-index: 0;
+    }
+
+    .button {
+      margin: 0;
+      top: 0;
+    }
+  }
+}

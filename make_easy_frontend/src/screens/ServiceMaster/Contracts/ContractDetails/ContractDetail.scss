@@ -1,0 +1,110 @@
+@use '/src/variables';
+
+.other-component-view{
+    min-height: calc(100vh - 128px);
+    padding: 15px 15px 0;
+}
+
+.action-dd .dropdown-toggle{margin-left: auto;}
+.action-dd{
+    .dropdown-submenu{right: 100%;top: 75%;box-shadow: var(--shadow);    width: inherit;}
+    
+}
+.action-dd .dd-sub-menu:hover{
+    .dropdown-submenu{display: block;}
+}
+.hideCol{
+    width: 0px;
+    margin-left: -18px;
+    .content-wrap{
+        display: none;
+    }
+    .btn-collapse img{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    }
+}
+.wide-col{
+    width: 100%;
+    padding-left: 20px;
+    .page-content-wraper{margin-left: 0 !important;}
+}
+#wideCol{
+    .page-content-wraper{margin-left: 0 !important;}
+}
+.part-used-grid .table-scroll{min-height: 200px;}
+.action-dd .dropdown-menu{z-index: 3 !important;}
+
+.btn.btn-collapse{
+    background: var(--bg-gradient-v);
+    height: 38px;
+    width: 20px;
+    border-radius: 0px 5px 5px 0px;
+    padding: 0 0;
+    position: absolute;
+    right: -19px;
+    top: 0;
+    border: 0;
+}
+
+.disable-option{
+    pointer-events: none;
+    color: variables.$lowGrey  !important;
+    opacity: 0.4;
+}
+.disable-option:hover {
+    pointer-events: none;
+    background-color: variables.$lightBlue  !important;
+  }
+
+.table-scroll{
+    .error-message{margin-top: 0;    height: 45px;}
+}
+.total-div{background-color: var(--extremeLightGrey);text-align: end;padding: 4px 6px;border-radius: 0 0 4px 4px;}
+.tab-style-2 {
+    .nav-item{width: auto;}
+}
+
+.call-recipt-card{
+    .date-range{
+        background-color: var(--lightBlue);
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--black);
+        display: inline;
+        padding: 5px 5px;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+        cursor: pointer;
+    }
+}
+.name-palceholder{
+    background-color: var(--blue);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: var(--white);
+    font-size: 16px;
+}
+.maintenance-Schedule-grid .grid-table,.maintScehdListGrid .grid-table{
+    min-height: 200px;
+}
+.maintenance-Schedule-grid{
+    .error-message{
+        margin-top: -140px;
+    height: 140px;
+    }
+}
+.maintenance-Schedule-grid .grid-table tr td, .maintScehdListGrid .grid-table tr td{vertical-align: top;}
+ .grid-table .select .open-top{bottom: initial;}
+
+ .create-maintance-sched-blad{
+    .equipment-grid .table-scroll,.part-used-grid .table-scroll{margin-top: 0;}
+ }

@@ -1,0 +1,90 @@
+@use "/src/variables";
+
+.content-card{max-height: calc(100vh - 125px);overflow: auto;}
+.sticky-button{
+  position: sticky;bottom: 0;
+  padding: 15px 0 15px 0;
+  background: var(--white);
+  box-shadow: 2px -4px 9px #00000026;
+}
+.edit-address {
+  .main-edit-address {
+    background-color: var(--white);
+    margin-left: 46px;
+    margin-right: 16px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+  }
+
+  .service-location-info {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--black);
+  }
+
+  .default-service {
+    margin-top: 15px;
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--black);
+  }
+
+  .edit-address-button-view {
+    margin-top: 47px;
+    margin-bottom: 41px;
+    justify-content: center;
+    .button {
+      width: 328px;
+    }
+  }
+
+  .checkbox {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+  }
+
+  .horizontal-line {
+    width: 100%;
+    border: 1px solid var(--extremeLightGrey);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .add-button {
+    cursor: pointer;
+    background: var(--color4);
+    width: 98px;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+  }
+
+  .add-button-view {
+    // margin-left: 39px;
+    margin-top: 5px;
+  }
+
+  .service-location-address {
+    width: 100%;
+    background-color: var(--lightBlue);
+    margin-top: 3px;
+    padding: 18px;
+    border-radius: 5px;
+  }
+
+  .address-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--black);
+  }
+}

@@ -1,0 +1,39 @@
+@use '/src/variables';
+
+.contracts {
+    .contracts-heading-view {
+     
+    }
+
+    .contracts-title {
+        margin-left: 13.33px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--black);
+       
+    }
+
+    .contracts-left-icon {
+       
+    }
+    .table-scroll{max-height: calc(100vh - 263px);}
+}
+.contract-card{
+ min-height: auto !important;
+}
+.contract-detail-card{
+    min-height: calc(100vh - 516px) !important;
+}
+
+.disable-option{
+    pointer-events: none;
+    color: variables.$lowGrey  !important;
+    opacity: 0.4;
+}
+.disable-option:hover {
+    pointer-events: none;
+    background-color: variables.$lightBlue  !important;
+  }

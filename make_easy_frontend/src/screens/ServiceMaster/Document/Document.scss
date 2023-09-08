@@ -1,0 +1,31 @@
+@use '/src/variables';
+
+.document {
+    .document-heading-view {
+        
+    }
+
+    .document-title {
+        margin-left: 13.33px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--black);
+        
+    }
+
+    .document-left-icon {
+        
+    }
+}
+.right-card .other-component-view{
+    min-height: calc(100vh - 137px);
+}
+.documents-tab{
+    .nav.nav-tabs{margin: 0 -15px 0px;}
+    .tab-content{padding: 0;padding-top: 10px;max-height: calc(100vh - 195px);overflow-y: auto;overflow-x: hidden;}
+    .nav-item{width: auto;}
+}
+ 

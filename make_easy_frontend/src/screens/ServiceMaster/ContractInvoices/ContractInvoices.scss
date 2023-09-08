@@ -1,0 +1,15 @@
+@use "/src/variables";
+
+.contract-invoices {
+  .togglecontent {
+    label {
+      margin: 0;
+    }
+    .button {
+      top: -2px;
+    }
+  }
+  .table-scroll {
+    max-height: calc(100vh - 245px);
+  }
+}
