@@ -1,0 +1,70 @@
+.previewMail {
+    .label {
+        width: 10%;
+    }
+
+    .input {
+        margin-left: 10px;
+        width: 95%;
+    }
+
+    .textEditorInput {
+        width: 85%;
+        margin-left: 15px;
+    }
+
+    #form-file-upload {
+        width: '100%';
+    }
+
+    #input-file-upload {
+        display: none;
+    }
+
+    #label-file-upload.drag-active {
+        background-color: var(--white);
+    }
+
+    #label-file-upload {
+        border: 1px dashed var(--blue);
+        border-radius: 5px;
+        height: 62px;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--blue);
+        margin-top: 15px;
+        width: 633px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        margin-left: 80px;
+    }
+
+    #label-file-upload:hover {
+        border-style: solid;
+    }
+
+    .dropFileText {
+        text-align: center;
+        margin-left: 70px;
+    }
+
+    .verticalLine {
+        margin-top: 10px;
+        border: 1px solid var(--whiteSmoke);
+    }
+
+    .attachment {
+        margin-top: 10px;
+    }
+
+    .document-list {
+        margin-top: 7px;
+    }
+}

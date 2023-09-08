@@ -1,0 +1,29 @@
+@use "/src/variables";
+
+.service {
+  background-color: var(--white);
+  height: auto;
+  width: auto;
+}
+.service-master {
+  .right-card.with-CustInfo {
+    width: 100%;
+    overflow-x: hidden;
+
+    .table-scroll {
+      max-height: calc(100vh - 245px);
+      .grid-table {
+        overflow: auto !important;
+      }
+      .grid-table thead {
+        position: sticky;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+  .right-card.no-CustInfo{
+    .other-component-view{min-height: calc(100vh - 155px);}
+    .table-scroll {max-height: calc(100vh - 270px)}
+  }
+}

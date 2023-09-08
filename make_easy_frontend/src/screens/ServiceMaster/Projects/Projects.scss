@@ -1,0 +1,22 @@
+@use '/src/variables';
+
+.projects {
+    .projects-heading-view {
+        
+    }
+
+    .projects-title {
+        margin-left: 13.33px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--black);
+       
+    }
+
+    .projects-left-icon {
+        
+    }
+}
