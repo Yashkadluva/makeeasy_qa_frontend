@@ -1,0 +1,26 @@
+.top-five-customers {
+    .card {
+        background-color: white;
+        border-radius: 5px;
+        min-height: 360px;
+
+        .name {
+            font-weight: 600;
+            margin-left: 10px;
+            margin-top: 10px;
+            // width: 600%;
+        }
+
+        .dropdrop-view {
+            width: 250% !important;
+            margin-left: 20px;
+        }
+    }
+    .dropdown-div{
+        width: 50%;
+    }
+    .duration-dropdown{
+        width: 50%;
+        margin-top: 5px;
+    }
+}

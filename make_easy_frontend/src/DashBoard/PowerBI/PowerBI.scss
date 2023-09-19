@@ -1,0 +1,40 @@
+.report-style-class {
+    height: 120vh;
+    margin: 1% auto;
+    width: 100%;
+}
+
+.footer-text {
+    font: Regular 16px/21px Segoe UI;
+    height: 21px;
+    letter-spacing: 0;
+    margin-top: 9px;
+    opacity: 1;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-text>a {
+    color: #278ce2;
+    font: Regular 16px/21px Segoe UI;
+    letter-spacing: 0;
+    text-decoration: underline;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.report-power-button {
+    background: #337ab7;
+    border: 0;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: medium;
+    height: 35px;
+    margin-right: 15px;
+    width: 150px;
+    margin-bottom: 20px;
+}

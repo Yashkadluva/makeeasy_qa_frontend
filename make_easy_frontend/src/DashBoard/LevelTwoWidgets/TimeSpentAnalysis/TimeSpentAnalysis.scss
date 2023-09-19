@@ -1,0 +1,32 @@
+.time-spent-analysis {
+    .card {
+        background-color: white;
+        border-radius: 5px;
+        min-height: 360px;
+
+        .work-hour-view {
+            border-radius: 5px;
+            width: 3px;
+            height: 20px;
+            transform: rotate(-90deg);
+            margin-top: 12px;
+        }
+
+        .label-text {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+
+    .dropdown-div {
+        width: 100%;
+    }
+
+    .duration-dropdown {
+        width: 30%;
+        margin-top: 5px;
+    }
+}

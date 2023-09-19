@@ -1,0 +1,81 @@
+.estimate-by-status {
+    .card {
+        background-color: white;
+        border-radius: 5px;
+        height: 360px;
+
+        .active-customer-count {
+            margin-left: 12px;
+            color: #435BAA;
+            font-size: 24px;
+            font-weight: 700;
+            margin-top: 100px;
+        }
+
+        .total-customer-title {
+            color: #02101B;
+            font-weight: 400;
+            margin-left: 12px;
+        }
+
+        .round-circle {
+            width: 12px;
+            height: 12px;
+            background: #4AC125;
+            border-radius: 6px;
+            margin-top: 40px;
+        }
+
+        .active-contract-text {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            color: #02101B;
+            margin-left: 10px;
+            margin-top: 35px;
+        }
+        .vertical-line-div-green{
+            width: 5px;
+            background-color: #4AC125;
+            margin-right: 5px;
+        }
+
+        .vertical-line-div-black{
+            width: 5px;
+            background-color: #000;
+            margin-right: 5px;
+        }
+
+        .text-green{
+            color: #4AC125;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .text-black{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .dropdown-div{
+            width: 50%;
+        }
+
+        .duration-dropdown-div{
+            width: 40%;
+        }
+
+        .count-text{
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .final-quote-count-div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+}

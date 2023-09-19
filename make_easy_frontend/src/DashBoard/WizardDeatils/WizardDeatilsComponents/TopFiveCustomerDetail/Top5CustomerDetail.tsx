@@ -1,0 +1,104 @@
+import './TopFiveCustomerDetail.scss';
+import { useEffect, useState } from 'react';
+import HelperService from '../../../../../utility/HelperService';
+import Grid, { GridColumn, GridHeader, GridRow } from '../../../../../components/Grid/Grid';
+import DescriptionModal from '../../../../../components/DescriptionModal/DescriptionModal';
+
+
+interface PropData {
+    data: any;
+    showLoader: any;
+};
+
+const headers: GridHeader[] = [
+    {
+        title: "Name",
+    },
+    {
+        title: "Address",
+    },
+    {
+        title: "Email",
+    },
+    {
+        title: "Phone #",
+        class: "text-end"
+    },
+    {
+        title: "Revenue ($) ",
+        class: "text-end"
+    }
+
+];
+
+
+const Top5CustomerDetail = (props: PropData) => {
+    const [rows, setRows] = useState<GridRow[]>([]);
+    const [isShowDescription, setIsShowDescription] = useState(false);
+    const [descriptionData, setDescriptionData] = useState("");
+
+
+    useEffect(() => {
+        if (props.data && props.data.length > 0) {
+            let rows: GridRow[] = [];
+            for (var i in props.data) {
+                let columns: GridColumn[] = [];
+                columns.push({ value: props.data[i].ArCustomerMasterName });
+                columns.push({ value: props.data[i].Address });
+                columns.push({ value: props.data[i].Email });
+
+                columns.push({ value: props.data[i].PhoneNumber && HelperService.getFormattedContact(props.data[i].PhoneNumber) });
+                columns.push({ value: props.data[i].Revenue && HelperService.getCurrencyFormatter(props.data[i].Revenue) });
+
+                rows.push({ data: columns });
+            }
+
+            setRows(rows);
+        } else {
+            setRows([])
+        }
+    }, [props.data]);
+
+
+
+
+
+    const showDescription = (e: any) => {
+        if (e) {
+            return (
+                <a className="grid-hypper-link"
+                    onClick={() => viewFullDescription(e)}>
+                    {HelperService.removeHtml(e)}
+                </a>
+            );
+        }
+    };
+
+    const viewFullDescription = (data: any) => {
+        setDescriptionData(data);
+        setIsShowDescription(true);
+    };
+
+    return (
+        <>
+            <DescriptionModal
+                isShow={isShowDescription}
+                title="Description"
+                isClose={() => setIsShowDescription(false)}
+                data={descriptionData}
+            />
+            <div className="mt-2 detail-grid-div">
+                <Grid
+                    headers={headers}
+                    rows={rows}
+                    ShowLoader={props.showLoader}
+                    errorMessage={"No Part Found"}
+                />
+            </div>
+        </>
+    )
+}
+
+export default Top5CustomerDetail;
+
+

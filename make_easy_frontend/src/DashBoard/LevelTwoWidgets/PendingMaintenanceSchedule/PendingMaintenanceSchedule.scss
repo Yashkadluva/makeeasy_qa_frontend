@@ -1,0 +1,42 @@
+.pending-maintenance-schedule {
+    .card {
+        background-color: white;
+        border-radius: 5px;
+        min-height: 360px;
+
+        .count {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            color: #33C046;
+            margin-left: 74px;
+        }
+
+        .month {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            color: #02101B;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+
+        .box {
+            width: 3px;
+            height: 17px;
+            border-radius: 5px;
+            transform: rotate(-90deg);
+        }
+
+        .label-text {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #02101B;
+            margin-left: 20px;
+        }
+    }
+}
